@@ -1,12 +1,13 @@
 # app.py
 from flask import Flask
+from controllers.post_controller import post_bp
+from controllers.login_controller import login_bp
 
 app = Flask(__name__)
 
-@app.route('/')
-@app.route('/home')
-def home():
-    return {"message": "Welcome to the Flask Blog Home!"}
+app.secret_key = "supersecretkey"
+app.register_blueprint(post_bp)
+app.register_blueprint(login_bp)
 
 if __name__ == '__main__':
     app.run(debug=True)
