@@ -1,0 +1,15 @@
+----------
+
+현재 post_controller의 내용의 글들에 들어가기 전에, 로그인 여부를 체크하는 기능을 만들 예정이야. pytest 프레임워크를 사용해서, login/logout이 잘 되는지의 테스트 케이스를 작성해줘. 인증정보는 임의로 ID: dev, PWD: 12345로 하자.
+
+테스트 시나리오들:
+
+로그인이 되어있지 않을 때 post_controller에 진입 시 인증 실패 발생(NOT_AUTHENTICATED reason으로 fail)
+로그인 시도 시 ID/PWD가 맞지 않으면 인증 실패 발생(WRONG_INFO reason으로 fail)
+로그인 시도 시 ID/PWD가 맞으면 로그인(reason은 비어있고, pass)
+
+----------
+
+다음은, 현재 test_auth를 기반으로, 모든 테스트 케이스들이 통과할 수 있도록, controllers/login_controller를 구현해보자.
+
+----------
