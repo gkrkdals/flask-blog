@@ -1,5 +1,5 @@
-flask-blog
-==========
+app
+===
 
 .. toctree::
    :maxdepth: 4
